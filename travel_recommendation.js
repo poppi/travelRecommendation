@@ -15,6 +15,9 @@ function searchDestinations() {
                 if (searchString.toLowerCase().includes('temple')) {
                     return data.temples;
                 }
+                if (searchString.toLowerCase().includes('country')) {
+                    return [...data.countries[0].cities, ...data.countries[1].cities, ...data.countries[2].cities];
+                }
                 switch (searchString.toLowerCase().trim()) {
                     case 'australia':
                         return data.countries[0].cities;
